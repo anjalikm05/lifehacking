@@ -34,7 +34,7 @@
                 $_SESSION['id'] = mysqli_insert_id($link);
                     
                 $query = "UPDATE users SET password = '". md5(md5($_SESSION['id']).$password)."' WHERE id = ".$_SESSION['id']." LIMIT 1";
-                mysqli_query($link, $query);
+                mysqli_query($link, $query) or die('error'.mysqli_error($link));
                 
                 echo 1;
 

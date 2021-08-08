@@ -30,9 +30,10 @@
 
                 <div id="main">
 
-                    <h2>Posts For You</h2>
+                    <br/>
+                    <h2>Your posts...</h2>
 
-                    <?php displayPosts('isFollowing'); ?>
+                    <?php displayPosts('yourtweets'); ?>
                                     
                 </div>
                 <div id="right">

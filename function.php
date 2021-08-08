@@ -1,6 +1,6 @@
 <?php
 
-    $link = mysqli_connect("localhost","root","","lifehacking-3133331369");
+    $link = mysqli_connect("localhost","root","","lifehackingdatabase");
     
     if(mysqli_connect_error()){
         print_r(mysqli_connect_error());
@@ -213,6 +213,7 @@
             $query = "SELECT * FROM posts ".$whereClause."".$whichClause." ORDER BY `time` DESC LIMIT 10";
             
             $result = mysqli_query($link, $query);
+            // mysqli_query($link, $query) or die(mysqli_error($link));
             
             if (mysqli_num_rows($result) == 0) {
                 
